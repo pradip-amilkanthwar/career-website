@@ -2,44 +2,35 @@
 <html>
   <head>
     <title>Career Website</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <style>
-    h2{
-      font-size:40px;
-      font-family:roboto;
-      color:rgb(100,100,100);
-    }
-    p{
-        font-size:15px;
-        font-family:roboto;
-        color:rgb(100,100,100);
-      text-align:center;
-      }
     #home-banner{
       height:500px;
       width:100%;
       object-fit:cover;
-    }
-    #container{
-      max-width:1400px;
-      margin:0 auto 0 auto;
-    }
+    } 
     </style>
   </head>
   <body>
-    <div id="container">
-      <h2>Career Website</h2>
+    <div class="container">
+      <h2 class="text-left mb-4 mt-2">{{company_name}} Careers</h2>
       <div>
-        <img id="home-banner" src="/static/home-banner.jpg" width="100%" height="350" alt="Career Website">
+        <img id="home-banner" class="img-fluid" src="/static/home-banner.jpg" width="100%" height="350" alt="Career Website">
       </div>
-      <p>
+      <p class="text-left mb-3 mt-3">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et convallis tortor, vel sagittis lacus. Mauris ac euismod arcu, ut vulputate arcu. Vestibulum ligula lorem, consectetur elementum nisl vitae, viverra blandit lectus. Praesent elementum lacus a magna laoreet sodales. Maecenas convallis a purus eu euismod. Sed auctor magna leo, vitae gravida ipsum commodo ut. Mauris enim dui, mollis vitae leo ac, imperdiet eleifend sapien. Suspendisse potenti. Vivamus in sem dolor. Phasellus nec purus ut neque eleifend dapibus vitae a leo. Curabitur lobortis tincidunt nulla, non consequat erat tristique at.
+</p>
+<p class="text-left mb-3 mt-3">     Donec neque quam, cursus non tortor vitae, maximus cursus sem. Cras eget tellus ut augue dapibus faucibus in sed nibh. Ut sollicitudin iaculis facilisis. Cras lorem neque, volutpat non vestibulum ut, pulvinar et nibh. Pellentesque magna est, suscipit maximus sapien ac, condimentum sodales ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque consectetur a arcu non cursus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam convallis eros massa, molestie iaculis diam placerat sed. Quisque vulputate tincidunt nunc dictum consequat. Pellentesque venenatis velit ac diam lacinia euismod. Pellentesque venenatis sapien ut consequat tincidunt. Cras commodo elit a hendrerit egestas. Vivamus dignissim nibh a convallis aliquet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam eleifend dui convallis nisi mattis viverra.</p>
 
-        Donec neque quam, cursus non tortor vitae, maximus cursus sem. Cras eget tellus ut augue dapibus faucibus in sed nibh. Ut sollicitudin iaculis facilisis. Cras lorem neque, volutpat non vestibulum ut, pulvinar et nibh. Pellentesque magna est, suscipit maximus sapien ac, condimentum sodales ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque consectetur a arcu non cursus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam convallis eros massa, molestie iaculis diam placerat sed. Quisque vulputate tincidunt nunc dictum consequat. Pellentesque venenatis velit ac diam lacinia euismod. Pellentesque venenatis sapien ut consequat tincidunt. Cras commodo elit a hendrerit egestas. Vivamus dignissim nibh a convallis aliquet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam eleifend dui convallis nisi mattis viverra.
-
-        Aenean eget felis velit. Quisque eu placerat ligula. In aliquam lorem urna, sed imperdiet sapien fringilla in. Ut et egestas elit, vel ullamcorper lectus. Maecenas gravida nec ipsum quis placerat. Suspendisse a suscipit sapien. Nullam vel sagittis orci. Duis et pretium erat, vitae molestie est. In dignissim sit amet neque quis tincidunt. Vivamus eu velit quis quam tempus euismod eu quis sapien. Proin eu nunc et sem tristique posuere.
+      <p class="text-left mb-3 mt-3">Aenean eget felis velit. Quisque eu placerat ligula. In aliquam lorem urna, sed imperdiet sapien fringilla in. Ut et egestas elit, vel ullamcorper lectus. Maecenas gravida nec ipsum quis placerat. Suspendisse a suscipit sapien. Nullam vel sagittis orci. Duis et pretium erat, vitae molestie est. In dignissim sit amet neque quis tincidunt. Vivamus eu velit quis quam tempus euismod eu quis sapien. Proin eu nunc et sem tristique posuere.
       </p>
       <h2>Open Positions</h2>
-      <p>To do Jobs will be apper here</p>
+      <div class="text-left mb-3 mt-3 border-bottom">{% for job in jobs %}
+          {% include 'job-item.html' %}
+        {% endfor %}
+      </div>
       <h2>Contact Us</h2>
     </div>
     
