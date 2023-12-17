@@ -1,20 +1,4 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Career Website</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <style>
-    #home-banner{
-      height:500px;
-      width:100%;
-      object-fit:cover;
-    } 
-    </style>
-  </head>
-  <body>
-    <div class="container">
+      {% include 'open-nav.html' %}
       {% include 'header.html' %}      
       <div>
         <img id="home-banner" class="img-fluid" src="/static/home-banner.jpg" width="100%" height="350" alt="Career Website">
@@ -27,13 +11,5 @@
 
       <p class="text-left mb-3 mt-3">Aenean eget felis velit. Quisque eu placerat ligula. In aliquam lorem urna, sed imperdiet sapien fringilla in. Ut et egestas elit, vel ullamcorper lectus. Maecenas gravida nec ipsum quis placerat. Suspendisse a suscipit sapien. Nullam vel sagittis orci. Duis et pretium erat, vitae molestie est. In dignissim sit amet neque quis tincidunt. Vivamus eu velit quis quam tempus euismod eu quis sapien. Proin eu nunc et sem tristique posuere.
       </p>
-      <h2>Open Positions</h2>
-      <div class="text-left mb-3 mt-3 border-bottom">{% for job in jobs %}
-          {% include 'job-item.html' %}
-        {% endfor %}
-      </div>
       {% include 'footer.html' %} 
-    </div>
-    
-  </body>
-</html>
+    {% include 'close-nav.html' %}

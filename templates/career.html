@@ -1,0 +1,17 @@
+{% include 'open-nav.html' %}
+{% include 'header.html' %}
+      <div class="mt-6 mb-6">
+        <img id="home-banner" class="img-fluid" src="/static/home-banner.jpg" width="100%" height="350" alt="Career Website">
+      </div>
+
+<div class="mb-4 mt-4">
+  <h2 class="mb-4 mt-4">Open Positions</h2>
+</div>
+
+<div class="text-left mb-3 mt-6 border-bottom">{% for job in jobs %}
+    {% include 'job-item.html' %}
+  {% endfor %}
+</div>
+{% include 'footer.html' %}
+{% include 'close-nav.html' %}
+    
